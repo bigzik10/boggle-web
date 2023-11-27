@@ -1,0 +1,37 @@
+<!-- header.component.html -->
+
+<header class="app-header">
+    <div class="logo">
+      <img src="assets/logo.png" alt="Logo">
+    </div>
+    <div class="actions">
+      <div class="user-image">
+        <img src="assets/images/isaac.jpg" alt="">
+      </div>
+      <div class="menu-icon" (click)="toggleNavbar()">
+        <i class="fa-solid" [ngClass]="{'fa-bars': !isNavbarOpen, 'fa-times': isNavbarOpen}"></i>
+      </div><!-- Hamburger menu icon -->
+    </div>
+
+    
+  </header>
+  <div class="navbar-container" [ngClass]="{'open': isNavbarOpen}">
+    <div class="navbar">
+        <ul>
+            <li class="flex"><img src="assets/images/heart-3.svg" alt="" class="mr-3"> Favorite</li>
+            <li class="flex"><img src="assets/images/nav-street-road.png" alt="" class="mr-3"> Trips</li>
+            <li class="flex"><img src="assets/images/message.svg" alt="" class="mr-3"> Inbox</li>
+            <div class="h-0.5 w-64 bg-gray-300 my-1"></div>
+            <li class="flex"><img src="assets/images/profile.svg" alt="" class="mr-3"> Profile</li>
+            <li class="flex"><img src="assets/images/setting.svg" alt="" class="mr-3"> Account Settings</li>
+            <li class="flex"><img src="assets/images/nav-car-3.svg" alt="" class="mr-3"> Become a Host</li>
+            <li class="flex"><img src="assets/images/nav-wallet.svg" alt="" class="mr-3"> Boggle Wallet</li>
+            <div class="h-0.5 w-64 bg-gray-300 my-1"></div>
+            <li class="flex"><img src="assets/images/nav-group.svg" alt="" class="mr-3"> How Boggle Works</li>
+            <li class="flex"><img src="assets/images/nav-customer-support-5.svg" alt="" class="mr-3"> Contact Support</li>
+            <li class="flex"><img src="assets/images/legal.svg" alt="" class="mr-3"> Legal Matters</li>
+            <div class="h-0.5 w-64 bg-gray-300 my-1"></div>
+            <li class="flex"><img src="assets/images/logout.svg" alt="" class="mr-3"> Logout</li>
+        </ul>
+    </div>
+  </div>

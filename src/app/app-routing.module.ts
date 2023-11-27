@@ -1,7 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
+import { HomepageComponent } from './homepage/homepage.component';
+import { ErrorPageComponent } from './error-page/error-page.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: '', component: HomepageComponent, title: 'Home | Boggle'},
+  { path: 'login', component: LoginComponent, title: 'Login | Boggle'},
+  { path: 'signup', component: SignupComponent, title: 'SignUp | Boggle'},
+  { path: '404', component: ErrorPageComponent, title: '404 Page Not Found | Boggle'},
+  { path: 'hompage', component: HomepageComponent, title: 'Home | Boggle'}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

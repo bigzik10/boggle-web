@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SignUp | Boggle</title>
+</head>
+<body>
+  
+  <div class="signup-container">
+    <h3>Welcome to Boggle</h3>
+    <p class="my-2">Create an account to keep track of your car bookings, access exclusive deals, receive personalized recommendations, and stay updated with the latest offers and promotions.</p>
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+      <div class="input-container">
+        <label class="mt-2" for="first-name">First Name</label>
+        <input type="text" id="first-name" placeholder="John" required>
+    </div>
+      <div class="input-container">
+        <label class="mt-2" for="last-name">Last Name</label>
+        <input type="text" id="last-name" placeholder="Doe" required>
+    </div>
+      <div class="input-container">
+        <label class="mt-2" for="email">Email</label>
+        <input type="email" id="email" placeholder="@email.com" formControlName="email"/>
+    </div>
+    <div class="input-container">
+        <label class="mt-2" for="password">Password</label>
+        <input [type]="hidePassword ? 'password' : 'text'" [(ngModel)]="password" type="password" id="password" placeholder="*****" formControlName="password"/>
+        <span class="toggle-password" (click)="togglePasswordVisibility()">
+          <i *ngIf="hidePassword" class="fa fa-eye"></i>
+          <i *ngIf="!hidePassword" class="fa fa-eye-slash"></i>
+          </span>
+    </div>
+    <div class="input-container">
+      <label class="mt-2" for="phoneInput">Phone Number</label>
+      <input  type="tel" id="phoneInput" #phoneInput formControlName="phonenumber" placeholder="08056410027"/>
+  </div>
+    <div class="input-container">
+      <label class="mt-2" for="password">Gender</label>
+      <select name="gender" id="gender" formControlName="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="later">Prefer not to say</option>
+      </select>
+  </div>
+  <div class="input-container">
+    <label class="mt-2" for="dob">Date of Birth</label>
+    <input type="date" id="dob" formControlName="dob" />
+  </div>
+    <a routerLink="#"><button type="submit" class="login-button mt-3">SignUp</button></a>
+    </form>
+    <div class="my-3 mx-auto">Or</div>
+    <div class="social-login flex flex-col">
+      <a routerLink="#"><button type="submit" class="social-button text-xs whitepace-nowrap flex mb-2 justify-center items-center"><img src="assets/images/google-original.svg" alt="" class="mr-1"> SignUp with Google</button></a>
+      <a routerLink="#"><button type="submit" class="social-button text-xs whitepace-nowrap flex justify-center items-center"><img src="assets/images/apple-original.svg" alt="" class="mr-1"> SignUp with Apple</button></a>
+    </div>
+    <div class="my-3 register">Already have an account?<a routerLink="/login" class="reg ml-1 cursor-pointer">Login</a></div>
+  </div>
+</body>
+</html>

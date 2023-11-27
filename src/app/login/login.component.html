@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Boggle</title>
+</head>
+<body>
+  <div class="login-container">
+    <h3>Login</h3>
+    <p class="my-1">Log in to continue</p>
+    <form>
+      <div class="input-container">
+        <label class="mt-2" for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="@email.com" required>
+    </div>
+    <div class="input-container">
+        <label class="mt-2" for="password">Password</label>
+        <input [type]="hidePassword ? 'password' : 'text'" [(ngModel)]="password" name="password" id="password" placeholder="*****" required>
+        <span class="toggle-password" (click)="togglePasswordVisibility()">
+        <i *ngIf="hidePassword" class="fa fa-eye"></i>
+        <i *ngIf="!hidePassword" class="fa fa-eye-slash"></i>
+        </span>
+    </div>
+    <div class="my-3 forgot-password">Forgot Password?<a href="#" class="reset-password ml-1">Reset Here</a></div>
+    <a routerLink="#"><button type="submit" class="login-button">Login</button></a>
+    </form>
+    <div class="my-3 mx-auto">Or</div>
+    <div class="social-login flex flex-col">
+      <a routerLink="#"><button type="submit" class="social-button text-xs whitepace-nowrap flex mb-2 justify-center items-center"><img src="assets/images/google-original.svg" alt="" class="mr-2"> Login with Google</button></a>
+      <a routerLink="#"><button type="submit" class="social-button text-xs whitepace-nowrap flex justify-center items-center"><img src="assets/images/apple-original.svg" alt="" class="mr-2"> Login with Apple</button></a>
+    </div>
+    <div class="my-3 register">Don't have an account?<span routerLink="/signup" class="reg ml-1 cursor-pointer">SignUp</span></div>
+  </div>
+</body>
+</html>

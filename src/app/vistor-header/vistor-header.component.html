@@ -1,0 +1,33 @@
+<!-- header.component.html -->
+
+<header class="app-header">
+    <div class="logo">
+      <img src="assets/logo.png" alt="Logo">
+    </div>
+    <div class="actions">
+      <button class="host-button">Become a Host</button>
+      <div class="menu-icon" (click)="toggleNavbar()">
+        <i class="fa-solid" [ngClass]="{'fa-bars': !isNavbarOpen, 'fa-times': isNavbarOpen}"></i>
+      </div><!-- Hamburger menu icon -->
+    </div>
+
+    
+  </header>
+  <div class="navbar-container" [ngClass]="{'open': isNavbarOpen}">
+    <div class="navbar">
+        <ul>
+            <li class="flex" routerLink="/login"> Login</li>
+            <li class="flex" routerLink="/signup"> Sign Up</li>
+            <li class="flex"><img src="assets/images/nav-car-3.svg" alt="" class="mr-3"> Become a Host</li>
+            <div class="h-0.5 w-64 bg-gray-300 my-1"></div>
+            <li class="flex"><img src="assets/images/setting.svg" alt="" class="mr-3"> Account Settings</li>
+            <li class="flex"><img src="assets/images/nav-group.svg" alt="" class="mr-3"> How Boggle Works</li>
+            <li class="flex"><img src="assets/images/nav-customer-support-5.svg" alt="" class="mr-3"> Contact Support</li>
+            <li class="flex"><img src="assets/images/legal.svg" alt="" class="mr-3"> Legal Matters</li>
+        </ul>
+    </div>
+  </div>
+
+
+  
+  

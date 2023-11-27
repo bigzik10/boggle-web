@@ -1,1 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital@1&family=REM:wght@300;400;500;600;700&display=swap');
+
+* {
+    font-family: REM;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* For Chrome, Safari, and newer versions of Edge */
+
+/* Track */
+::-webkit-scrollbar {
+    width: 12px; /* width of the scrollbar */
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background-color: #888; /* color of the scrollbar handle */
+    border-radius: 6px; /* roundness of the scrollbar handle */
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #12B7D2; /* color of the scrollbar handle on hover */
+  }
+  
+  /* Track when not actively scrolling but cursor is over */
+  ::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* color of the scrollbar track */
+  }
+  
+  /* Track when actively scrolling */
+  ::-webkit-scrollbar-track-piece:start {
+    background-color: #ddd; /* color of the scrollbar track piece at the top when actively scrolling */
+  }
+  
+  ::-webkit-scrollbar-track-piece:end {
+    background-color: #ddd; /* color of the scrollbar track piece at the bottom when actively scrolling */
+  }
+  

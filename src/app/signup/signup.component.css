@@ -1,0 +1,141 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4f4f4;
+}
+
+  .signup-container {
+    position: relative;
+    margin-top: 110px;
+    margin-bottom: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 450px;
+    background-color: #fff;
+    transition: left 0.4s ease-in-out;
+    padding: 16px 20px 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    height: auto;
+    max-width: 330px;
+    box-shadow: 0 2px 4px rgba(0, 0.1, 0.1, 0.1);
+    border-radius: 6px;
+  }
+
+  .toggle-password {
+    cursor: pointer;
+    position: absolute;
+    right: 40px;
+    top: 46%;
+    transform: translateY(-50%);
+}
+
+  .signup-container.open {
+    display: flex;
+  }
+
+  .close-icon i {
+    cursor: pointer;
+  }
+
+  .login-container h3, .signup-container h3 {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    color: #2d2d2d;
+    line-height: normal;
+  }
+
+  .login-container p, .signup-container p {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    color: #AEAEAE;
+    line-height: normal;
+  }
+
+  label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #2d2d2d;
+}
+
+select {
+  cursor: pointer;
+}
+
+select,
+input[type="date"],
+input[type="tel"],
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 5px 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+input[type="email"] {
+  text-align: left;
+}
+
+.forgot-password {
+  color: #2d2d2d;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.reset-password {
+  color: #12B7D2;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+
+.login-button {
+  display: flex;
+  padding: 5px 115px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  background-color: #000;
+  color: #FFF;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+
+.social-button {
+  padding: 5px 80px;
+  background-color: #515151;
+  border-radius: 10px;
+  white-space: nowrap;
+  color: #FFF;
+  text-align: center;
+}
+
+.register {
+  color: #2d2d2d;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.reg {
+  color: #12B7D2;
+  font-weight: 500;
+  text-decoration: underline;
+}

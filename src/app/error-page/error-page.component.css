@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+  .text-5xl, .font-semibold {
+    color: #12B7D2;
+  }
+
+  button {
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #333;
+  }

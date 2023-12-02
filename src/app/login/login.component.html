@@ -22,7 +22,7 @@
         <i *ngIf="!hidePassword" class="fa fa-eye-slash"></i>
         </span>
     </div>
-    <div class="my-3 forgot-password">Forgot Password?<a href="#" class="reset-password ml-1">Reset Here</a></div>
+    <div class="my-3 forgot-password">Forgot Password?<a (click)="navigateToForgotPassword()" class="reset-password ml-1 cursor-pointer">Reset Here</a></div>
     <a routerLink="#"><button type="submit" class="login-button">Login</button></a>
     </form>
     <div class="my-3 mx-auto">Or</div>

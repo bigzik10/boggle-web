@@ -17,4 +17,8 @@ export class LoginComponent {
   }
 
   constructor(private router: Router) {}
+
+  navigateToForgotPassword() {
+    this.router.navigate(['/forgot-password']);
+  }
 }

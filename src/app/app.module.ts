@@ -12,6 +12,10 @@ import { ErrorPageComponent } from './error-page/error-page.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { FooterComponent } from './footer/footer.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { HostPageComponent } from './host-page/host-page.component';
+import { BecomeHostPageComponent } from './become-host-page/become-host-page.component';
+import { AccordionComponent } from './accordion/accordion.component';
+import { AccordionService } from './accordion/accordion.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +27,10 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
     ErrorPageComponent,
     HomepageComponent,
     FooterComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    HostPageComponent,
+    BecomeHostPageComponent,
+    AccordionComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +38,7 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [
+  providers: [AccordionService
   ],
   bootstrap: [AppComponent]
 })

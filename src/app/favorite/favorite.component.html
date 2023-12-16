@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite | Boggle</title>
+</head>
+<body>
+    <section *ngIf="cars.length > 0; else noFavorites" class="first-section">
+        <h1 class="text-left text-2xl font-bold my-2"><span>Blessing</span>’s favourites</h1>
+        <div class="container-holder">
+            <div class="fav-con" *ngFor="let car of cars">
+                <div class="fav-image"><img [src]="car.imageUrl" alt="car-image" /></div>
+                <div class="flex justify-between py-1.5 px-2">
+                  <p class="text-base text-left font-semibold">{{ car.name }}</p>
+                  <span class="text-end" (click)="openRemoveConfirmationModal(car)">
+                    <i class="fa-solid fa-heart cursor-pointer" style="color: #FF3A44;"></i>
+                  </span>
+                </div>
+                <div class="flex px-2 pb-1 text-sm">
+                  <span class="mr-1">
+                    (<span>{{ car.rating }}</span>)
+                    <i class="fa-solid fa-star mx-1" style="color: #12B7D2;"></i>
+                    <i class="fa-regular fa-user mx-1"></i>
+                    (<span>{{ car.numReviews }}</span>)
+                  </span>
+                  <div class="flex items-center">
+                    <img src="assets/images/Gearbox.png" class="mx-1" />
+                    <span>{{ car.gearbox }}</span>
+                  </div>
+                </div>
+                <div class="flex px-2 text-sm">
+                  <i class="fas fa-map-marker-alt py-0.5"></i>
+                  <span class="mx-1 font-semibold pb-0.5">{{ car.location }}</span>
+                </div>
+                <div class="flex py-2 px-2 justify-between ml-auto font-medium">
+                  <span>₦ <span class="ml-0.5">{{ car.price }}</span>/day</span>
+                </div>
+              </div>              
+        </div>
+         <!-- Remove Confirmation Modal -->
+  <div *ngIf="isRemoveModalOpen" class="modal">
+    <div class="modal-content">
+      <h1 class="text-2xl font-bold text-left">Remove from favorites</h1>
+      <p class="text-sm">Are you sure you want to remove {{ carToRemove?.name }} from favorites?</p>
+      <div class="modal-buttons ml-auto">
+        <button class="mr-2" (click)="cancelRemove()" style="color: #12B7D2;">Cancel</button>
+        <button class="cont-button" (click)="carToRemove && removeFavorite(carToRemove)">Remove</button>
+      </div>
+    </div>
+  </div>
+    </section>
+    <ng-template #noFavorites>
+      <section class="second-section">
+        <h1 class="text-left text-2xl font-bold my-2"><span>Blessing</span>’s favourites</h1>
+        <div class="con-holder py-3 mx-auto items-center flex flex-col">
+            <img src="assets/images/rafiki.png" alt="svg-icon"/>
+            <div class="flex flex-col py-3 text-center">
+                <h1 class="text-4xl font-semibold">No favorites</h1>
+                <p class="text-base font-medium py-2">You’ll be able to access your favorite cars here.</p>
+            </div>
+            <a><button class="p-2.5 cursor-pointer" style="border-radius: 5px; border: 1px solid #AEAEAE;"><i class="fas fa-search mr-2"></i>Find new favorites</button></a>
+        </div>
+    </section>
+    </ng-template>
+    <app-footer></app-footer>
+</body>
+</html>

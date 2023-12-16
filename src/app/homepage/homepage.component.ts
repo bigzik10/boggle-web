@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 
 interface Car {
   make: string;
@@ -12,7 +12,7 @@ interface Car {
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.css']
 })
-export class HomepageComponent {
+export class HomepageComponent implements AfterViewInit {
   cars: Car[] = [
     { make: 'Suv / Jeep', imageUrl: 'assets/images/car-rectangle-1.png' },
     { make: 'Mercedes-Benz', imageUrl: 'assets/images/car-rectangle-1.png' },
@@ -21,6 +21,30 @@ export class HomepageComponent {
     { make: 'Honda', imageUrl: 'assets/images/car-rectangle-1.png' },
     // Add more cars as needed...
   ];
+
+  ngAfterViewInit() {
+    this.duplicateCarouselItems();
+  }
+
+  duplicateCarouselItems() {
+    const slide = 4;
+    const carouselItems = document.querySelectorAll('.carousel-inner .carousel-item');
+
+    carouselItems.forEach((item) => {
+      let next = item.nextElementSibling;
+      for (let i = 0; i < slide; i++) {
+        if (!next) {
+          next = carouselItems[0];
+        }
+        const cloneChild = next.cloneNode(true) as HTMLElement;
+        const firstChild = cloneChild.querySelector('.col-md-3');
+        if (firstChild) {
+          item.appendChild(firstChild);
+        }
+        next = next.nextElementSibling;
+      }
+    });
+  }
 
 
   currentIndex = 0;

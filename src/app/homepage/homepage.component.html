@@ -25,20 +25,26 @@
     </section>
     <section class="car-section">
       <h1 class="text-3xl font-bold mb-3" style="color: #000;">Browse by make</h1>
-      <div class="carousel-con">
-        <div class="carousel-wrapper">
-          <div class="carousel mb-2" [style.transform]="'translateX(' + currentIndex * -itemWidth + 'px)'">
-            <div *ngFor="let car of cars" class="image-con mb-3 flex flex-col rounded">
-              <img [src]="car.imageUrl" alt="{{ car.make }}" class="rounded" />
-              <p class="text-base text-center my-1 font-bold">{{ car.make }}</p>
+      <div id="carouselExample" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div *ngFor="let car of cars; let i = index" class="carousel-item" [class.active]="i === 0">
+            <div class="col-md-3">
+                <div class="image-con mb-3 flex flex-col rounded">
+                  <img [src]="car.imageUrl" alt="{{ car.make }}" class="image-fluid rounded" />
+                  <p class="text-base text-center my-1 font-bold">{{ car.make }}</p>
+                </div>
             </div>
           </div>
-          <div class="nav-buttons">
-            <button (click)="prev()">❮</button>
-            <button (click)="next()">❯</button>
-          </div>
         </div>
-      </div>
+        <button class="carousel-control-prev" data-bs-target="#carouselExample" type="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true" style="color: #12B7D2;"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" data-bs-target="#carouselExample" type="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true" style="color: #12B7D2;"></span>
+          <span class="visually-hidden">Next</span>
+        </button> 
+      </div>    
       <h1 class="text-3xl font-bold my-4 capitalize text-center" style="color: #000;">Why Choose Boggle?</h1>
       <div class="card-section">
         <div class="card-holder mb-3">
@@ -113,19 +119,25 @@
     </section>
     <section class="city-section">
       <h1 class="text-2xl text-center font-bold mb-3" style="color: #000;">Browse By City</h1>
-      <div class="carousel-con">
-        <div class="carousel-wrapper">
-          <div class="carousel mb-2" [style.transform]="'translateX(' + currentIndex * -itemWidth + 'px)'">
-            <div *ngFor="let car of cars" class="state-image-con mb-5 flex flex-col" style="border-radius: 50%;">
-              <img [src]="car.imageUrl" alt="{{ car.make }}"/>
+      <div id="carouselExample" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div *ngFor="let car of cars; let i = index" class="carousel-item" [class.active]="i === 0">
+            <div class="col-md-3">
+              <div class="state-image-con mb-5 flex flex-col" style="border-radius: 50%;">
+                <img [src]="car.imageUrl" alt="{{ car.make }}"/>
+              </div>
             </div>
-          </div>
-          <div class="nav-buttons">
-            <button (click)="prev()">❮</button>
-            <button (click)="next()">❯</button>
           </div>
         </div>
       </div>
+      <button class="carousel-control-prev" data-bs-target="#carouselExample" type="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true" style="color: #12B7D2;"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" data-bs-target="#carouselExample" type="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true" style="color: #12B7D2;"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
       <a href="#"><h1 class="text-lg font-bold mb-5 capitalize" style="color: #12B7D2;">Explore Hosting</h1></a>
       <div class="city-bg">
         <img src="assets/images/homepage-rectangle-34.png" alt="man-sitting"/>

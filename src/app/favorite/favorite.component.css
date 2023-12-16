@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    color: #000;
+  }
+
+  .first-section {
+    min-height: 100vh;
+    width: 100vw;
+    background-color: #fff;
+    position: relative;
+    overflow: hidden !important;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 3rem;
+    margin-top: 90px;
+  }
+
+  .container-holder {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1800px; /* Adjust the maximum width as needed */
+    margin: 0 auto; /* Center the cards horizontally */
+}
+
+  .fav-con {
+    position: relative;
+    margin: 1rem;
+    background-color: #fff;
+    transition: left 0.4s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+    width: 260px;
+    box-shadow: 0 2px 4px rgba(0, 0.1, 0.1, 0.1);
+    border-radius: 6px;
+  }
+
+  .fav-image img {
+    height: 150px;
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .second-section {
+    min-height: 100vh;
+    width: 100vw;
+    background-color: #fff;
+    position: relative;
+    overflow: hidden !important;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 3rem;
+    margin-top: 90px;
+  }
+
+  /* favorite.component.css */
+/* Add your modal styles here */
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fff;
+  max-width: 550px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.modal-buttons {
+  display: flex;
+  margin-top: 15px;
+}
+
+.modal-buttons button {
+  display: flex;
+  padding: 10px 20px; /* Adjust padding as needed */
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.modal-buttons .cont-button {
+  background-color: #000;
+  color: #FFF;
+  border-radius: 6px;
+}
+
+
+  @media screen and (max-width: 768px) {
+    .first-section{
+        padding: 1rem 1rem;
+    }
+
+    .container-holder {
+      justify-content: center; /* Center items on small screens */
+    }
+  
+    
+  }
+
+  @media screen and (max-width: 668px) {
+    
+  }
+  
+

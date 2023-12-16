@@ -5,7 +5,8 @@ import { SignupComponent } from './signup/signup.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
-import { BecomeHostPageComponent } from './become-host-page/become-host-page.component'
+import { BecomeHostPageComponent } from './become-host-page/become-host-page.component';
+import { FavoriteComponent } from './favorite/favorite.component';
 
 const routes: Routes = [
   { path: '', component: HomepageComponent, title: 'Home | Boggle'},
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'hompage', component: HomepageComponent, title: 'Home | Boggle'},
   { path: 'forgot-password', component: ForgotPasswordComponent, title: 'ForgotPassword | Boggle'},
   { path: 'become-host', component: BecomeHostPageComponent, title: 'Become-a-Host | Boggle'},
+  { path: 'favorite', component: FavoriteComponent, title: 'Favorite | Boggle'},
 ];
 
 @NgModule({

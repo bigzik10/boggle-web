@@ -16,6 +16,10 @@ import { HostPageComponent } from './host-page/host-page.component';
 import { BecomeHostPageComponent } from './become-host-page/become-host-page.component';
 import { AccordionComponent } from './accordion/accordion.component';
 import { AccordionService } from './accordion/accordion.service';
+import { FavoriteComponent } from './favorite/favorite.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog';
+import { FooterAccordionComponent } from './footer-accordion/footer-accordion.component';
 
 @NgModule({
   declarations: [
@@ -30,13 +34,17 @@ import { AccordionService } from './accordion/accordion.service';
     ForgotPasswordComponent,
     HostPageComponent,
     BecomeHostPageComponent,
-    AccordionComponent
+    AccordionComponent,
+    FavoriteComponent,
+    FooterAccordionComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatDialogModule,
+    NoopAnimationsModule
   ],
   providers: [AccordionService
   ],
